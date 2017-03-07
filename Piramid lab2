@@ -84,7 +84,7 @@ class ROWID():
             print('Number invisible - ', middlel, middler)
             return 'Good Day!'
         
-numb = int(input('vvedite chislo ot 1 do 28 - '))
+numb = int(input('Vvedite chislo ot 1 do 28 - '))
 print(ROWID.row())
     
     
