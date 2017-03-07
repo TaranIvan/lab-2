@@ -21,3 +21,75 @@ else:
     middlel = (numb - row)
     middler = middlel + 1
     print('Numb close kart ', middlel, middler)
+  
+  ________________________________________________________________
+    
+numb = int(input('vvedite chislo ot 1 do 28 - '))
+class ROWID():
+    def __init__(self, row, summ):
+        self.row = row
+        self.summ = summ
+        
+    def row(self):
+        self.summ = 0
+        for i in range(1, 29):
+            self.summ += i
+            if numb <= self.summ:
+                self.row = i
+                break
+        return self.row
+    
+    @staticmethod
+    def invisible():
+        row = 4
+        summ = 10
+        if numb == summ:
+            right = numb - row
+            return right
+        elif numb == ((summ - row) + 1):
+            left = numb - (row - 1)
+            return left
+        else:    
+            middlel = (numb - row)
+            middler = middlel + 1
+            return middlel, middler
+        
+        
+    
+    
+print('Row of numb = ', ROWID.row())
+print('Row of numb = ', ROWID.invisible())
+
+
+________________________________________________________________________________________
+class ROWID():
+    @staticmethod
+    def row():
+        sum = 0
+        for i in range(1, 29):
+            sum += i
+            if numb <= sum:
+                row = i
+                break
+        print('Row of numb = ', row) 
+        if numb == sum:
+            right = numb - row
+            return ('Number invisible - ', right)
+        elif numb == ((sum - row) + 1):
+            left = numb - (row - 1)
+            return ('Number invisible - ', left)
+        else:    
+            middlel = (numb - row)
+            middler = middlel + 1
+            print('Number invisible - ', middlel, middler)
+            return 'Good Day!'
+        
+numb = int(input('vvedite chislo ot 1 do 28 - '))
+print(ROWID.row())
+    
+    
+    
+    
+    
+    
+
